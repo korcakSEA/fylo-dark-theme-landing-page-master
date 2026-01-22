@@ -1,0 +1,27 @@
+ /* Standard Screen Reader Only class */
+ .sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border-width: 0;
+ }
+
+ .hero {
+   /* This ensures the image stays at the bottom and stretches 100% wide */
+   background-image: url('./images/bg-curvy-desktop.svg');
+   background-repeat: no-repeat;
+   background-position: bottom center;
+   background-size: 100% auto;
+   /* The width stays 100%, the height scales automatically */
+
+  }
+  @media (max-width: 768px) {
+    .hero {
+      background-image: url('./images/bg-curvy-mobile.svg');
+    }
+  }
