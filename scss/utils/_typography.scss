@@ -1,0 +1,151 @@
+@use '_func_mixins' as *;
+
+/* raleway-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/fonts/raleway-v37-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../assets/fonts/raleway-v37-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/fonts/open-sans-v44-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../assets/fonts/open-sans-v44-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+// Font Family
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+// Font-sizes
+$fs-800: px-to-rem(40);
+$fs-700: px-to-rem(20);
+$fs-600: px-to-rem(16);
+$fs-500: px-to-rem(14);
+$fs-400: px-to-rem(12);
+$fs-300: px-to-rem(10);
+$fs-200: px-to-rem(7);
+
+// Font weight variables
+$fw-regular: 400;
+$fw-bold: 700;
+
+// Line heights
+$lh-120: 1.2;
+$lh-150: 1.5;
+$lh-180: 1.8;
+
+// Letter Spacing
+$ls-lg: 0.5px;
+
+@mixin text-style ($font, $size, $weight, $lineheight, $spacing) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineheight;
+  letter-spacing: $spacing;
+}
+
+// Font settings
+// Text - Preset 1
+@mixin text-preset-1 {
+  @include text-style($font-primary, $fs-800, $fw-bold, $lh-200, $ls-sm);
+}
+
+// Text - Preset 2
+@mixin text-preset-2 {
+  @include text-style($font-primary, $fs-700, $fw-sbold, $lh-300, $ls-sm);
+}
+
+// Text - Preset 3
+@mixin text-preset-3 {
+  @include text-style($font-primary, $fs-600, $fw-sbold, $lh-200, $ls-md);
+}
+
+// Text - Preset 4
+@mixin text-preset-4-sb {
+  @include text-style($font-primary, $fs-500, $fw-sbold, $lh-100, $ls-md);
+}
+
+@mixin text-preset-4 {
+  @include text-style($font-primary, $fs-500, $fw-regular, $lh-100, $ls-md);
+}
+
+// Text - Preset 5
+@mixin text-preset-5-sb {
+  @include text-style($font-secondary, $fs-400, $fw-sbold, $lh-400, $ls-lg);
+}
+
+@mixin text-preset-5 {
+  @include text-style($font-secondary, $fs-400, $fw-regular, $lh-400, $ls-lg);
+}
+
+// // Text - Preset 6
+@mixin text-preset-6 {
+  @include text-style($font-primary, $fs-300, $fw-sbold, $lh-300, $ls-md);
+}
+
+// Text - Preset 7
+@mixin text-preset-7 {
+  @include text-style($font-primary, $fs-200, $fw-regular, $lh-200, $ls-md);
+}
+
+
+@mixin text-preset-8 {
+  @include text-style($font-secondary, $fs-400, $fw-regular, $lh-400, $ls-lg);
+}
+
+// // Text - Preset 6
+@mixin text-preset-9 {
+  @include text-style($font-primary, $fs-300, $fw-sbold, $lh-300, $ls-md);
+}
+
+// Text - Preset 7
+@mixin text-preset-10 {
+  @include text-style($font-primary, $fs-200, $fw-regular, $lh-200, $ls-md);
+}
+
+// Link styles
+@mixin link {
+  font-family: $font-primary;
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.6785714285714286rem + 0.35714285714285715vw, 1rem);
+
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    font-weight: 700;
+  }
+}

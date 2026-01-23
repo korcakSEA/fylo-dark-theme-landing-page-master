@@ -1,0 +1,32 @@
+@use '../utils/' as *;
+
+.header {
+  margin-bottom: var(--spacing-300);
+
+  @include respond-to(md) {
+    margin-bottom: var(--spacing-1050);
+  }
+
+  @include respond-to(lg) {
+    margin-bottom: var(--spacing-800);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: clamp(5rem, 3.2857142857142856rem + 8.571428571428571vw, 11rem);
+  }
+
+  &__list {
+    display: flex;
+    gap: clamp(1.5rem, 0.9285714285714286rem + 2.857142857142857vw, 3.5rem);
+  }
+
+  &__link {
+    @include link;
+  }
+}

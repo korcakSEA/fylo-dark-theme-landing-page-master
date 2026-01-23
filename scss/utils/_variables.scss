@@ -1,0 +1,32 @@
+@use './func_mixins' as *;
+
+// Spacing
+$spacer: (
+  025: px-to-rem(2),
+  050: px-to-rem(4),
+  075: px-to-rem(6),
+  100: px-to-rem(8),
+  150: px-to-rem(12),
+  175: px-to-rem(14),
+  200: px-to-rem(16),
+  250: px-to-rem(20),
+  300: px-to-rem(24),
+  400: px-to-rem(32),
+  450: px-to-rem(34),
+  500: px-to-rem(40),
+  600: px-to-rem(48),
+  700: px-to-rem(56),
+  800: px-to-rem(64),
+  900: px-to-rem(72),
+  1000: px-to-rem(80),
+  1050: px-to-rem(100),
+  1100: px-to-rem(120),
+  1200: px-to-rem(135),
+);
+
+:root {
+  /* Spacing */
+  @each $spacing, $range in $spacer {
+    --spacing-#{$spacing}:#{$range};
+  }
+}

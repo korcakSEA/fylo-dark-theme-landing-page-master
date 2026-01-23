@@ -1,0 +1,21 @@
+@use '../utils/' as *;
+
+.hero {
+
+  width: 100%;
+  max-width: px-to-rem(736);
+
+  /* This ensures the image stays at the bottom and stretches 100% wide */
+  background-image: url('../../images/bg-curvy-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  /* The width stays 100%, the height scales automatically */
+
+}
+
+// @media (max-width: 768px) {
+//   .hero {
+//     background-image: url('./images/bg-curvy-mobile.svg');
+//   }
+// }

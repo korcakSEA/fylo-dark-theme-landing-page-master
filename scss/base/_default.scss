@@ -1,0 +1,47 @@
+@use '../utils/colors' as c;
+
+/* --------- */
+/* Reset     */
+/* --------- */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+// Help us to make calculationg width and heights easier, Default vaues are resetted
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid olive; // For accessibility reasons
+}
+
+body {
+  min-height: 100vh; //Prevents short pages being an issue
+  background-color: c.$navy-850;
+  color: c.$color-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// to make images easier to work with
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+// As the buttons dont inherit font property
+button,
+li {
+  font: inherit;
+}

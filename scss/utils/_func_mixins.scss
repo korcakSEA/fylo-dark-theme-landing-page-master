@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+@function px-to-rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond-to($breakpoint) {
+  @if ($breakpoint ==md) {
+    @media (min-width:px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @else if ($breakpoint ==lg) {
+    @media (min-width:px-to-rem(1200)) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// Colors
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-grey: hsl(0, 0%, 75%);
+$color-red: hsl(0, 100%, 63%);
+
+$navy-950: hsl(216, 53%, 9%);
+$navy-900: hsl(218, 28%, 13%);
+$navy-850: hsl(217, 28%, 15%);
+$navy-800: hsl(219, 30%, 18%);
+$navy-50: hsl(222, 36, 91);
+
+$blue-300: hsl(177, 67%, 63%);
+$blue-250: hsl(186, 61%, 72%);
+
+$gradient-start: hsl(176, 68%, 64%);
+$gradient-end: hsl(198, 60%, 50%);
+$gradient: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%);
