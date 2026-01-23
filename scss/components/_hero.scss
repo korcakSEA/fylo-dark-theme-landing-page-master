@@ -1,21 +1,39 @@
 @use '../utils/' as *;
 
 .hero {
-
   width: 100%;
-  max-width: px-to-rem(736);
-
-  /* This ensures the image stays at the bottom and stretches 100% wide */
-  background-image: url('../../images/bg-curvy-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  background-image: url('../../images/bg-curvy-desktop.svg');
+  background-position: bottom;
   background-size: 100% auto;
-  /* The width stays 100%, the height scales automatically */
+  background-repeat: no-repeat;
 
+  &__container {
+    max-width: px-to-rem(736);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-300);
+  }
+
+  &__title {
+    @include header-1;
+  }
+
+  &__text {
+    width: clamp(18.5rem, 0.9666030534351151rem + 74.80916030534351vw, 36.875rem);
+    height: px-to-rem(108);
+    @include header-text;
+
+    @include respond-to(md) {
+      height: auto;
+    }
+  }
 }
-
-// @media (max-width: 768px) {
-//   .hero {
-//     background-image: url('./images/bg-curvy-mobile.svg');
-//   }
-// }

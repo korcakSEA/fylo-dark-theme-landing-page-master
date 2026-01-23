@@ -49,8 +49,8 @@ $font-primary: 'Raleway', sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
 
 // Font-sizes
-$fs-800: px-to-rem(40);
-$fs-700: px-to-rem(20);
+$fs-header: clamp(1.25rem, 0.057251908396946494rem + 5.089058524173028vw, 2.5rem);
+$fs-header-text: clamp(0.875rem, 0.517175572519084rem + 1.5267175572519085vw, 1.25rem);
 $fs-600: px-to-rem(16);
 $fs-500: px-to-rem(14);
 $fs-400: px-to-rem(12);
@@ -69,7 +69,7 @@ $lh-180: 1.8;
 // Letter Spacing
 $ls-lg: 0.5px;
 
-@mixin text-style ($font, $size, $weight, $lineheight, $spacing) {
+@mixin text-style ($font, $size, $weight, $lineheight, $spacing : 0) {
   font-family: $font;
   font-size: $size;
   font-weight: $weight;
@@ -79,61 +79,17 @@ $ls-lg: 0.5px;
 
 // Font settings
 // Text - Preset 1
-@mixin text-preset-1 {
-  @include text-style($font-primary, $fs-800, $fw-bold, $lh-200, $ls-sm);
+@mixin header-1 {
+  @include text-style($font-primary, $fs-header, $fw-bold, $lh-120);
 }
 
-// Text - Preset 2
-@mixin text-preset-2 {
-  @include text-style($font-primary, $fs-700, $fw-sbold, $lh-300, $ls-sm);
+// Header text
+@mixin header-text {
+  @include text-style($font-secondary, $fs-header-text, $fw-regular, $lh-150);
 }
 
-// Text - Preset 3
-@mixin text-preset-3 {
-  @include text-style($font-primary, $fs-600, $fw-sbold, $lh-200, $ls-md);
-}
-
-// Text - Preset 4
-@mixin text-preset-4-sb {
-  @include text-style($font-primary, $fs-500, $fw-sbold, $lh-100, $ls-md);
-}
-
-@mixin text-preset-4 {
-  @include text-style($font-primary, $fs-500, $fw-regular, $lh-100, $ls-md);
-}
-
-// Text - Preset 5
-@mixin text-preset-5-sb {
-  @include text-style($font-secondary, $fs-400, $fw-sbold, $lh-400, $ls-lg);
-}
-
-@mixin text-preset-5 {
-  @include text-style($font-secondary, $fs-400, $fw-regular, $lh-400, $ls-lg);
-}
-
-// // Text - Preset 6
-@mixin text-preset-6 {
-  @include text-style($font-primary, $fs-300, $fw-sbold, $lh-300, $ls-md);
-}
-
-// Text - Preset 7
-@mixin text-preset-7 {
-  @include text-style($font-primary, $fs-200, $fw-regular, $lh-200, $ls-md);
-}
-
-
-@mixin text-preset-8 {
-  @include text-style($font-secondary, $fs-400, $fw-regular, $lh-400, $ls-lg);
-}
-
-// // Text - Preset 6
-@mixin text-preset-9 {
-  @include text-style($font-primary, $fs-300, $fw-sbold, $lh-300, $ls-md);
-}
-
-// Text - Preset 7
-@mixin text-preset-10 {
-  @include text-style($font-primary, $fs-200, $fw-regular, $lh-200, $ls-md);
+@mixin button {
+  @include text-style($font-primary, $fs-600, $fw-bold, $lh-120);
 }
 
 // Link styles
