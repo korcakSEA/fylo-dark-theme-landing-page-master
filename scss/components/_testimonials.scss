@@ -1,0 +1,56 @@
+@use '../utils/' as *;
+
+.testimonials {
+
+  &__card {
+    padding: var(--spacing-300);
+    background-color: $navy-800;
+
+    @include respond-to(md) {
+      padding: var(--spacing-500);
+    }
+
+    @include respond-to(lg) {
+      padding: var(--spacing-400) var(--spacing-300);
+    }
+  }
+
+  .testimonial {
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+
+    @include respond-to(md) {
+      gap: var(--spacing-300);
+    }
+
+    &__quote {
+      @include testimonial__quote;
+    }
+
+    &__author {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-100);
+    }
+
+    &__avatar {
+      width: px-to-rem(24);
+      height: px-to-rem(24);
+      border-radius: 50%;
+      margin-right: px-to-rem(8);
+    }
+
+    &__name {
+      display: block;
+      @include testimonial__name;
+    }
+
+    &__title {
+      @include testimonial__position;
+    }
+
+
+  }
+}

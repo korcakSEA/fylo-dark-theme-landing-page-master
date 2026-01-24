@@ -289,6 +289,161 @@ li {
   letter-spacing: 0;
 }
 
+.productive {
+  max-width: 74.125rem;
+  margin-inline: auto;
+  margin-bottom: var(--spacing-1300);
+}
+@media (min-width: 40rem) {
+  .productive {
+    margin-bottom: var(--spacing-900);
+  }
+}
+@media (min-width: 75rem) {
+  .productive {
+    margin-bottom: var(--spacing-1100);
+  }
+}
+.productive__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+@media (min-width: 75rem) {
+  .productive__container {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-700);
+  }
+}
+.productive__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+@media (min-width: 40rem) {
+  .productive__content {
+    gap: var(--spacing-300);
+  }
+}
+@media (min-width: 75rem) {
+  .productive__content {
+    max-width: 32.25rem;
+  }
+}
+.productive__title {
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1rem, -0.4312977099rem + 6.106870229vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+@media (min-width: 75rem) {
+  .productive__title {
+    width: 15ch;
+  }
+}
+.productive__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.875rem, 0.7557251908rem + 0.5089058524vw, 1rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.productive__link-content {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.6785714286rem + 0.3571428571vw, 1rem);
+  color: #fff;
+  display: inline-block;
+  color: hsl(177, 67%, 63%);
+  border-bottom: 1px solid hsl(177, 67%, 63%);
+  transition: all 150ms ease-in-out;
+}
+.productive__link-content:hover, .productive__link-content:focus {
+  font-weight: 700;
+}
+.productive__link-content:hover, .productive__link-content:focus {
+  color: hsl(0, 0%, 100%);
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+.productive__link-content:hover svg use, .productive__link-content:focus svg use {
+  fill: white;
+}
+.productive__link-content svg {
+  margin-left: var(--spacing-100);
+  vertical-align: middle;
+  transition: all 150ms ease-in-out;
+}
+
+.testimonials__card {
+  padding: var(--spacing-300);
+  background-color: hsl(219, 30%, 18%);
+}
+@media (min-width: 40rem) {
+  .testimonials__card {
+    padding: var(--spacing-500);
+  }
+}
+@media (min-width: 75rem) {
+  .testimonials__card {
+    padding: var(--spacing-400) var(--spacing-300);
+  }
+}
+.testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+@media (min-width: 40rem) {
+  .testimonials .testimonial {
+    gap: var(--spacing-300);
+  }
+}
+.testimonials .testimonial__quote {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 40rem) {
+  .testimonials .testimonial__quote {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+}
+.testimonials .testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+.testimonials .testimonial__avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.testimonials .testimonial__name {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.testimonials .testimonial__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.4375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
 .button {
   --blue-250: linear-gradient(#8ADAE3);
   font-family: "Raleway", sans-serif;

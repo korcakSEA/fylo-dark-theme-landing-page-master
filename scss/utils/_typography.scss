@@ -116,3 +116,34 @@ $ls-lg: 0.5px;
 @mixin features__text {
   @include text-style($font-secondary, px-to-rem(14), $fw-regular, $lh-150);
 }
+
+//productive title
+@mixin productive__title {
+  @include text-style($font-primary, clamp(1rem, -0.4312977099236641rem + 6.106870229007634vw, 2.5rem), $fw-bold, $lh-120);
+}
+
+// productive text
+@mixin productive__text {
+  @include text-style($font-secondary, clamp(0.875rem, 0.7557251908396947rem + 0.5089058524173028vw, 1rem), $fw-regular, $lh-150 );
+}
+
+// testimonial quote
+@mixin testimonial__quote {
+  @include text-style($font-secondary, px-to-rem(10), $fw-regular, $lh-180, $ls-lg);
+
+  @include respond-to(md) {
+    font-size: px-to-rem(14);
+    line-height: $lh-150;
+    letter-spacing: normal;
+  }
+}
+
+// testimonial author name
+@mixin testimonial__name {
+  @include text-style($font-primary, px-to-rem(10), $fw-bold, $lh-150, $ls-lg);
+}
+
+// testimonial author position
+@mixin testimonial__position {
+  @include text-style($font-secondary, px-to-rem(7), $fw-regular, $lh-150, $ls-lg);
+}

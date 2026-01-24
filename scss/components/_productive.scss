@@ -1,0 +1,83 @@
+@use '../utils/' as *;
+
+.productive {
+  max-width: px-to-rem(1186);
+  margin-inline: auto;
+  margin-bottom: var(--spacing-1300);
+
+  @include respond-to(md) {
+    margin-bottom: var(--spacing-900);
+  }
+
+  @include respond-to(lg) {
+    margin-bottom: var(--spacing-1100);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-300);
+
+    @include respond-to(lg) {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--spacing-700);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+
+    @include respond-to(md) {
+      gap: var(--spacing-300);
+    }
+
+    @include respond-to(lg) {
+      max-width: px-to-rem(516);
+    }
+  }
+
+  &__title {
+    @include productive__title;
+
+    @include respond-to(lg) {
+      width: 15ch;
+    }
+  }
+
+  &__text {
+    @include productive__text;
+  }
+
+  &__link {
+
+    &-content {
+      @include link;
+      display: inline-block;
+      color: $blue-300;
+      border-bottom: 1px solid $blue-300;
+      transition: all 150ms ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+        border-bottom: 1px solid $color-white;
+        font-weight: 400;
+
+        svg use {
+          fill: white; // Changes the circle background
+        }
+      }
+
+      svg {
+        margin-left: var(--spacing-100);
+        vertical-align: middle;
+        transition: all 150ms ease-in-out;
+      }
+    }
+  }
+}
