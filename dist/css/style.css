@@ -160,6 +160,7 @@ li {
 
 .hero {
   width: 100%;
+  background-image: url("../../images/bg-curvy-desktop.svg");
   background-position: bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
