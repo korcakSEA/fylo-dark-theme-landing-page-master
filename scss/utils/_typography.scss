@@ -88,6 +88,7 @@ $ls-lg: 0.5px;
   @include text-style($font-secondary, $fs-header-text, $fw-regular, $lh-150);
 }
 
+// Button styles
 @mixin button {
   @include text-style($font-primary, $fs-600, $fw-bold, $lh-120);
 }
@@ -104,4 +105,14 @@ $ls-lg: 0.5px;
   &:focus {
     font-weight: 700;
   }
+}
+
+//features title
+@mixin features__title {
+  @include text-style($font-primary, px-to-rem(20), $fw-bold, $lh-120);
+}
+
+//features text
+@mixin features__text {
+  @include text-style($font-secondary, px-to-rem(14), $fw-regular, $lh-150);
 }

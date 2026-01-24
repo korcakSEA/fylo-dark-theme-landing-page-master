@@ -6,7 +6,7 @@
 
 @mixin respond-to($breakpoint) {
   @if ($breakpoint ==md) {
-    @media (min-width:px-to-rem(768)) {
+    @media (min-width:px-to-rem(640)) {
       @content;
     }
   }

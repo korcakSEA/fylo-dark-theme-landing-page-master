@@ -1,11 +1,15 @@
 @use '../utils/' as *;
 
 .hero {
-  width: 100%;
-  background-image: url('../../images/bg-curvy-desktop.svg');
-  background-position: bottom;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  margin-bottom: px-to-rem(140);
+
+  @include respond-to(md) {
+    margin-bottom: px-to-rem(150);
+  }
+
+  @include respond-to(lg) {
+    margin-bottom: px-to-rem(146);
+  }
 
   &__container {
     max-width: px-to-rem(736);

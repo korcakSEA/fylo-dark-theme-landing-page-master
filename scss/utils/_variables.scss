@@ -22,9 +22,13 @@ $spacer: (
   1050: px-to-rem(100),
   1100: px-to-rem(120),
   1200: px-to-rem(135),
+  1300: px-to-rem(150),
+  1350: px-to-rem(160),
+
 );
 
 :root {
+
   /* Spacing */
   @each $spacing, $range in $spacer {
     --spacing-#{$spacing}:#{$range};
