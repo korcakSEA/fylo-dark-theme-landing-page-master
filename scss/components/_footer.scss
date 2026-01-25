@@ -52,10 +52,27 @@
     }
   }
 
+  // Content container
+  &__content {
+    @include respond-to(md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+
   // contact-info
 
   &__contact-info {
     margin-bottom: var(--spacing-700);
+
+    @include respond-to(md) {
+      width: 100%;
+      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+    }
   }
 
   &__item {
@@ -64,9 +81,15 @@
     align-items: flex-start;
     margin-bottom: var(--spacing-200);
 
-    &--address p {
-      font-family: $font-secondary;
-      line-height: $lh-150;
+    &--address {
+      @include respond-to(md) {
+        grid-row: span 2;
+      }
+
+      p {
+        font-family: $font-secondary;
+        line-height: $lh-150;
+      }
     }
 
     &--phone p,
@@ -74,6 +97,10 @@
       font-family: $font-secondary;
       font-size: $fs-500;
       line-height: $lh-150;
+    }
+
+    &--email {
+      @include respond-to(md) {}
     }
   }
 
@@ -94,12 +121,20 @@
   }
 
   &__links {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: var(--spacing-200);
 
-    &:first-child {
+    @include respond-to(md) {
+      grid-template-columns: repeat(3, auto);
+      column-gap: var(--spacing-1000);
+    }
+
+    li:nth-child(4) {
       margin-bottom: var(--spacing-500);
+
+      @include respond-to(md) {
+        margin-bottom: 0;
+      }
     }
 
     @include respond-to(md) {
@@ -116,9 +151,8 @@
   }
 
   // Social links
-
   &__social {
-    width: px-to-rem(102);
+    width: clamp(6.375rem, 5.003339694656488rem + 5.852417302798982vw, 7.8125rem);
     display: flex;
     justify-content: space-between;
     margin-inline: auto;
@@ -129,6 +163,11 @@
     align-items: center;
     justify-content: center;
     width: px-to-rem(27);
+
+    @include respond-to(md) {
+      width: px-to-rem(32);
+    }
+
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 1px solid $navy-50;
