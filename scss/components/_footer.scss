@@ -1,0 +1,151 @@
+@use '../utils/' as *;
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+
+  background-color: $navy-950;
+  // padding-inline: var(--spacing-300);
+  padding-bottom: var(--spacing-600);
+
+  height: px-to-rem(975);
+  margin-top: -180px;
+
+  @include respond-to(md) {
+    height: px-to-rem(640);
+    padding-inline: var(--spacing-700);
+    padding-block: var(--spacing-800);
+  }
+
+  @include respond-to(lg) {
+    height: px-to-rem(440);
+    padding-inline: var(--spacing-1000);
+    padding-block: var(--spacing-700);
+    margin-top: -115px;
+
+  }
+
+
+
+  &__container {
+    margin-inline: auto;
+    width: 86%;
+
+    @include respond-to(md) {}
+
+    @include respond-to(lg) {
+      width: px-to-rem(1240);
+    }
+
+  }
+
+  &__logo {
+    width: px-to-rem(108);
+    margin-bottom: var(--spacing-500);
+
+    @include respond-to(md) {
+      margin-bottom: var(--spacing-700);
+    }
+
+    @include respond-to(lg) {
+      margin-bottom: var(--spacing-600);
+    }
+  }
+
+  // contact-info
+
+  &__contact-info {
+    margin-bottom: var(--spacing-700);
+  }
+
+  &__item {
+    display: flex;
+    gap: var(--spacing-200);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-200);
+
+    &--address p {
+      font-family: $font-secondary;
+      line-height: $lh-150;
+    }
+
+    &--phone p,
+    &--email p {
+      font-family: $font-secondary;
+      font-size: $fs-500;
+      line-height: $lh-150;
+    }
+  }
+
+  &__icon-container {
+    width: px-to-rem(24);
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  // Footer Navigation links
+
+  &__nav {
+    margin-bottom: var(--spacing-600);
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+
+    &:first-child {
+      margin-bottom: var(--spacing-500);
+    }
+
+    @include respond-to(md) {
+      // flex-direction: row;
+      // gap: var(--spacing-800);
+    }
+
+  }
+
+  &__link {
+    @include link;
+    font-size: $fs-600;
+    cursor: pointer;
+  }
+
+  // Social links
+
+  &__social {
+    width: px-to-rem(102);
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: px-to-rem(27);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1px solid $navy-50;
+    transition: border-color 0.3s ease;
+
+    i {
+      color: $color-white;
+      transition: color 0.3s ease;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $blue-300;
+
+      i {
+        color: $blue-300;
+      }
+    }
+  }
+}
