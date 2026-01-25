@@ -4,23 +4,23 @@ const warningMsg = document.querySelector('.js-warning');
 
 form.addEventListener('submit', (e) => {
   const emailValue = emailInput.value.trim();
-  
+
   if (!validateEmail(emailValue)) {
     e.preventDefault(); // Stop the form from submitting
-    warningMsg.textContent = "Please check your email";
-    emailInput.classList.add('cta__input--error'); // Add a red border via CSS
+    warningMsg.textContent = "Error, please check your email";
+    emailInput.classList.add('js-warning');
   } else {
     warningMsg.textContent = "";
-    emailInput.classList.remove('cta__input--error');
+    emailInput.classList.remove('js-warning');
     // Form will submit naturally here
   }
 });
 
 // Error state reset on input
 emailInput.addEventListener('input', () => {
-  if (emailInput.classList.contains('cta__input--error')) {
+  if (emailInput.classList.contains('js-warning')) {
     warningMsg.textContent = "";
-    emailInput.classList.remove('cta__input--error');
+    emailInput.classList.remove('js-warning');
   }
 });
 

@@ -50,7 +50,7 @@ $font-secondary: 'Open Sans', sans-serif;
 
 // Font-sizes
 $fs-header: clamp(1.25rem, 0.057251908396946494rem + 5.089058524173028vw, 2.5rem);
-$fs-header-text: clamp(0.875rem, 0.517175572519084rem + 1.5267175572519085vw, 1.25rem);
+$fs-header-text: clamp(0.875rem, 0.5rem + 1.5vw, 1.25rem);
 $fs-600: px-to-rem(16);
 $fs-500: px-to-rem(14);
 $fs-400: px-to-rem(12);
@@ -90,14 +90,14 @@ $ls-lg: 0.5px;
 
 // Button styles
 @mixin button {
-  @include text-style($font-primary, $fs-600, $fw-bold, $lh-120);
+  @include text-style($font-primary, $fs-500, $fw-bold, $lh-120);
 }
 
 // Link styles
 @mixin link {
   font-family: $font-primary;
   font-size: 0.75rem;
-  font-size: clamp(0.75rem, 0.6785714285714286rem + 0.35714285714285715vw, 1rem);
+  font-size: clamp(0.75rem, 0.67rem + 0.35vw, 1rem);
 
   color: #fff;
 

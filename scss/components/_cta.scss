@@ -6,9 +6,9 @@
   margin-inline: auto;
   box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2);
 
-  @include respond-to(md) {
-    max-width: px-to-rem(863);
 
+  @include respond-to(md) {
+    width: clamp(30rem, 2.642857142857146rem + 56.99404761904761vw, 53.9375rem);
     padding: var(--spacing-600) var(--spacing-500);
   }
 
@@ -27,8 +27,67 @@
     margin-top: var(--spacing-300);
     margin-bottom: var(--spacing-400);
 
-    @include respond-to(md){
+    @include respond-to(md) {
       margin-top: var(--spacing-100);
-    } 
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-300);
+
+    @include respond-to(md) {
+      gap: var(--spacing-200);
+    }
+
+    @include respond-to(lg) {
+      flex-direction: row;
+      align-items: start;
+      // justify-content: center;
+      gap: var(--spacing-300);
+    }
+  }
+
+  &__group {
+    width: 100%;
+
+    @include respond-to(lg) {
+      max-width: px-to-rem(480);
+    }
+
+  }
+
+  &__input {
+    padding: var(--spacing-150) var(--spacing-200);
+    border-radius: px-to-rem(24);
+    height: px-to-rem(48);
+    border: none;
+    width: 100%;
+
+    &::placeholder {
+      color: $color-grey;
+      text-align: center;
+
+
+    }
+  }
+
+  .button--cta {
+    width: 100%;
+
+    @include respond-to(lg) {
+      width: px-to-rem(200);
+      padding-inline: var(--spacing-300);
+
+    }
+  }
+
+  &__error-msg.js-warning {
+    font-family: $font-secondary;
+    font-size: px-to-rem(12);
+    color: $color-error;
+    margin-top: var(--spacing-50);
   }
 }
