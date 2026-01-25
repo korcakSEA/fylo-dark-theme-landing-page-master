@@ -147,3 +147,12 @@ $ls-lg: 0.5px;
 @mixin testimonial__position {
   @include text-style($font-secondary, px-to-rem(7), $fw-regular, $lh-150, $ls-lg);
 }
+
+// cta title
+@mixin cta__title {
+  @include text-style($font-primary, px-to-rem(20), $fw-bold, $lh-120);
+
+  @include respond-to(md) {
+    font-size: px-to-rem(40);
+  }
+}

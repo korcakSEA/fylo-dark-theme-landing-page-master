@@ -379,6 +379,38 @@ li {
   transition: all 150ms ease-in-out;
 }
 
+.testimonials {
+  margin-bottom: 9.375rem;
+}
+@media (min-width: 40rem) {
+  .testimonials {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 75rem) {
+  .testimonials {
+    margin-bottom: 12.5rem;
+  }
+}
+.testimonials__grid {
+  max-width: 100%;
+  padding-inline: var(--spacing-300);
+  display: grid;
+  gap: var(--spacing-300);
+}
+@media (min-width: 40rem) {
+  .testimonials__grid {
+    padding-inline: var(--spacing-800);
+    gap: var(--spacing-500);
+  }
+}
+@media (min-width: 75rem) {
+  .testimonials__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-500);
+    padding-inline: var(--spacing-500);
+  }
+}
 .testimonials__card {
   padding: var(--spacing-300);
   background-color: hsl(219, 30%, 18%);
@@ -442,6 +474,52 @@ li {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.5px;
+}
+
+.cta {
+  padding: var(--spacing-500) var(--spacing-300);
+  background-color: hsl(217, 28%, 15%);
+  margin-inline: auto;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 40rem) {
+  .cta {
+    max-width: 53.9375rem;
+    padding: var(--spacing-600) var(--spacing-500);
+  }
+}
+@media (min-width: 75rem) {
+  .cta {
+    padding: var(--spacing-600) var(--spacing-1000);
+  }
+}
+.cta__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+}
+@media (min-width: 40rem) {
+  .cta__title {
+    font-size: 2.5rem;
+  }
+}
+.cta__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: var(--spacing-300);
+  margin-bottom: var(--spacing-400);
+}
+@media (min-width: 40rem) {
+  .cta__text {
+    margin-top: var(--spacing-100);
+  }
 }
 
 .button {

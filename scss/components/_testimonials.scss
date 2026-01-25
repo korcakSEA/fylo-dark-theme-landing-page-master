@@ -2,6 +2,35 @@
 
 .testimonials {
 
+  margin-bottom: px-to-rem(150);
+
+  @include respond-to(md) {
+    margin-bottom: px-to-rem(80);
+  }
+
+  @include respond-to(lg) {
+    margin-bottom: px-to-rem(200);
+  }
+
+  &__grid {
+    max-width: 100%;
+    padding-inline: var(--spacing-300);
+    display: grid;
+    gap: var(--spacing-300);
+
+    @include respond-to(md) {
+      padding-inline: var(--spacing-800);
+      gap: var(--spacing-500);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-500);
+      padding-inline: var(--spacing-500);
+
+    }
+  }
+
   &__card {
     padding: var(--spacing-300);
     background-color: $navy-800;
