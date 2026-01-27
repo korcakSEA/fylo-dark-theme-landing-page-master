@@ -15,12 +15,13 @@
 </head>
 
 <body>
+
   <!-- Main Starts here -->
-  <main class="wrapper">
+  <main>
     <!-- Header section -->
     <header class="header">
-      <div class="header__container">
-        <a href="/" class="header__logo-link" aria-label="Fylo Home">
+      <div class="wrapper header__container">
+        <a href="#" class="header__logo-link" aria-label="Fylo Home">
           <img src="./images/logo.svg" alt="Fylo Logo" class="header__logo">
         </a>
         <nav class="header__nav" aria-label="Main Navigation">
@@ -34,7 +35,7 @@
     </header>
     <!-- Hero section -->
     <section class="hero">
-      <div class="hero__container">
+      <div class="wrapper hero__container">
         <img src="./images/illustration-intro.png" alt="" class="hero__image" aria-hidden="true">
         <div class="hero__content">
           <h1 class="hero__title">All your files in one secure location, accessible anywhere.</h1>
@@ -48,60 +49,62 @@
     </section>
     <!-- Features section -->
     <section class="features" id="features">
-      <div class="features__grid">
-        <div class="features__item">
-          <div class="features__icon-container">
-            <img src="./images/icon-access-anywhere.svg" class="features__icon" aria-hidden="true">
+      <div class="wrapper features__container">
+        <div class="features__grid">
+          <div class="features__item">
+            <div class="features__icon-container">
+              <img src="./images/icon-access-anywhere.svg" class="features__icon" aria-hidden="true">
+            </div>
+            <div class="features__text">
+              <h3 class="features__title">Access your files, anywhere</h3>
+              <p class="features__description">
+                The ability to use a smartphone, tablet, or computer to access your account means your
+                files follow you everywhere.
+              </p>
+            </div>
           </div>
-          <div class="features__text">
-            <h3 class="features__title">Access your files, anywhere</h3>
-            <p class="features__description">
-              The ability to use a smartphone, tablet, or computer to access your account means your
-              files follow you everywhere.
-            </p>
+          <div class="features__item">
+            <div class="features__icon-container">
+              <img src="./images/icon-security.svg" class="features__icon" aria-hidden="true">
+            </div>
+            <div class="features__text">
+              <h3 class="features__title">Security you can trust</h3>
+              <p class="features__description">
+                2-factor authentication and user-controlled encryption are just a couple of the security
+                features we allow to help secure your files.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="features__item">
-          <div class="features__icon-container">
-            <img src="./images/icon-security.svg" class="features__icon" aria-hidden="true">
+          <div class="features__item">
+            <div class="features__icon-container">
+              <img src="./images/icon-collaboration.svg" class="features__icon" aria-hidden="true">
+            </div>
+            <div class="features__text">
+              <h3 class="features__title">Real-time collaboration</h3>
+              <p class="features__description">
+                Securely share files and folders with friends, family and colleagues for live collaboration.
+                No email attachments required.
+              </p>
+            </div>
           </div>
-          <div class="features__text">
-            <h3 class="features__title">Security you can trust</h3>
-            <p class="features__description">
-              2-factor authentication and user-controlled encryption are just a couple of the security
-              features we allow to help secure your files.
-            </p>
-          </div>
-        </div>
-        <div class="features__item">
-          <div class="features__icon-container">
-            <img src="./images/icon-collaboration.svg" class="features__icon" aria-hidden="true">
-          </div>
-          <div class="features__text">
-            <h3 class="features__title">Real-time collaboration</h3>
-            <p class="features__description">
-              Securely share files and folders with friends, family and colleagues for live collaboration.
-              No email attachments required.
-            </p>
-          </div>
-        </div>
-        <div class="features__item">
-          <div class="features__icon-container">
-            <img src="./images/icon-any-file.svg" class="features__icon" aria-hidden="true">
-          </div>
-          <div class="features__text">
-            <h3 class="features__title">Store any type of file</h3>
-            <p class="features__description">
-              Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
-              file types to be securely stored and shared.
-            </p>
+          <div class="features__item">
+            <div class="features__icon-container">
+              <img src="./images/icon-any-file.svg" class="features__icon" aria-hidden="true">
+            </div>
+            <div class="features__text">
+              <h3 class="features__title">Store any type of file</h3>
+              <p class="features__description">
+                Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
+                file types to be securely stored and shared.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Productive Section -->
     <section class="productive">
-      <div class="productive__container">
+      <div class="wrapper productive__container">
         <div class="productive__image-wrapper">
           <img src="./images/illustration-stay-productive.png" alt="" class="productive__img">
         </div>
@@ -215,7 +218,7 @@
   </main>
   <!-- Footer Starts here -->
   <footer class=" footer">
-    <div class="footer__container">
+    <div class="wrapper footer__container">
       <img src="./images/logo.svg" alt="Fylo Logo" class="footer__logo">
 
       <div class="footer__content">
@@ -249,6 +252,8 @@
             <li><a href="#" class="footer__link">Jobs</a></li>
             <li><a href="#" class="footer__link">Press</a></li>
             <li><a href="#" class="footer__link">Blog</a></li>
+          </ul>
+          <ul class="footer__links">
             <li><a href="#" class="footer__link">Contact Us</a></li>
             <li><a href="#" class="footer__link">Terms</a></li>
             <li><a href="#" class="footer__link">Privacy</a></li>

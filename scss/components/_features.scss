@@ -1,23 +1,27 @@
 @use '../utils/' as *;
 
 .features {
-  max-width: px-to-rem(907);
-  margin-inline: auto;
+  --max-content-width:#{px-to-rem(907)};
+  background-color: $navy-900;
 
-  margin-bottom: px-to-rem(140);
+  padding-top: px-to-rem(140);
+  padding-bottom: px-to-rem(160);
 
   @include respond-to(md) {
-    margin-bottom: px-to-rem(150);
+    padding-top: px-to-rem(150);
+    padding-bottom: px-to-rem(120);
+
   }
 
   @include respond-to(lg) {
-    margin-bottom: px-to-rem(146);
-  }
+    padding-top: px-to-rem(146);
+    padding-bottom: px-to-rem(146);
 
+  }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(px-to-rem(290), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
     row-gap: var(--spacing-1000);
     column-gap: var(--spacing-200);
 
@@ -26,7 +30,7 @@
       column-gap: var(--spacing-1000);
     }
 
-    @include respond-to(md) {
+    @include respond-to(lg) {
       row-gap: var(--spacing-1000);
       column-gap: var(--spacing-1350);
     }
@@ -42,27 +46,25 @@
     @include respond-to(md) {
       gap: var(--spacing-200);
 
-      &:nth-child(3){
-        grid-column: 2/ 3;
+      &:nth-child(2) {
         grid-row: 1 / 2;
+        grid-column: 2 / 3;
       }
 
-       &:nth-child(2){
-        grid-column: 1/ 2;
+      &:nth-child(3) {
         grid-row: 2 / 3;
+        grid-column: 1 / 2;
       }
+
     }
-
-
-
   }
 
   &__icon-container {
     display: flex;
-    justify-content: center; // Horizontal centering
+    justify-content: center;
     align-items: center;
-    width: clamp(5rem, 3.928571428571429rem + 5.357142857142857vw, 6.5rem);
-    height: clamp(5rem, 3.928571428571429rem + 5.357142857142857vw, 6.5rem);
+    width: clamp(5rem, 3.9285714286rem + 5.3571428571vw, 6.5rem);
+    height: clamp(5rem, 3.9285714286rem + 5.3571428571vw, 6.5rem);
   }
 
   &__icon {
@@ -72,13 +74,9 @@
 
   &__title {
     @include features__title;
-    margin-bottom: var(--spacing-100);
-    // text-align: center;
   }
 
   &__description {
     @include features__text;
-    // text-align: center;
   }
-
 }

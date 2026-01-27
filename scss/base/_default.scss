@@ -16,13 +16,21 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  // outline: 1px solid olive; // For accessibility reasons
+  outline: 1px solid olive; // For accessibility reasons
 }
 
 body {
   min-height: 100vh; //Prevents short pages being an issue
   background-color: c.$navy-800;
   color: c.$color-white;
+  // background-image: url('../../images/bg-curvy-mobile.svg');
+  // background-repeat: no-repeat;
+  // background-position: center top clamp(17.5rem, 5rem + 53.333333333333336vw, 53rem);
+  // background-size: 100% auto;
+
+  // @media (min-width:768px) {
+  //   background-image: url('../../images/bg-curvy-desktop.svg');
+  // }
 }
 
 a {

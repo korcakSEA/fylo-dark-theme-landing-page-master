@@ -1,7 +1,14 @@
-@use '../utils/_func_mixins' as *;
+@use '../utils/' as *;
 
 .wrapper {
-  width: min(100% - 48px, px-to-rem(1280));
+  // Defined wrapper variables with fallback values
+  --_inline-padding: var(--inline-padding, #{px-to-rem(48)});
+  // Adjust inline padding for meduim screens and up
+  @include respond-to(md) {
+    --_inline-padding: var(--inline-padding, #{px-to-rem(108)});
+  }
+  // Defined max content width with a fallback value
+  --_max-content-width: var(--max-content-width, #{px-to-rem(1280)});
+  width: min(100% - var(--_inline-padding), var(--_max-content-width));
   margin-inline: auto;
-  margin-top: clamp(1.5rem, 0.5rem + 5vw, 5rem);
 }

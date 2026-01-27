@@ -1,43 +1,73 @@
 @use '../utils/' as *;
 
 .hero {
-  margin-bottom: px-to-rem(140);
+  // Hero max content width with a fallback value
+  --max-content-width:#{px-to-rem(734)};
+
+  background-image: url('../../images/bg-curvy-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
 
   @include respond-to(md) {
-    margin-bottom: px-to-rem(150);
+    background-image: url('../../images/bg-curvy-desktop.svg');
   }
 
-  @include respond-to(lg) {
-    margin-bottom: px-to-rem(146);
-  }
 
   &__container {
-    max-width: px-to-rem(736);
-    margin-inline: auto;
+    // flex layout for hero section
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    gap: var(--spacing-900);
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include respond-to(md) {
+      gap: var(--spacing-800);
+    }
+
+    @include respond-to(lg) {
+      gap: var(--spacing-700);
+    }
+
     text-align: center;
-    gap: var(--spacing-300);
   }
 
   &__title {
     @include header-1;
+    margin-bottom: var(--spacing-300);
+
+    @include respond-to(md) {
+      margin-bottom: var(--spacing-600);
+    }
+
+    @include respond-to(lg) {
+      margin-bottom: var(--spacing-500);
+    }
   }
 
   &__text {
-    width: clamp(18.5rem, 0.9666030534351151rem + 74.80916030534351vw, 36.875rem);
-    height: px-to-rem(108);
     @include header-text;
+    margin-bottom: var(--spacing-300);
+    height: px-to-rem(108);
 
     @include respond-to(md) {
+      margin-bottom: var(--spacing-600);
       height: auto;
+    }
+
+    @include respond-to(lg) {
+      max-width: 52ch;
+      margin-inline: auto;
+      margin-bottom: var(--spacing-400);
+    }
+  }
+
+  .button--hero {
+    padding-inline: var(--spacing-1000);
+    margin-inline: auto;
+
+    @include respond-to(md) {
+      width: px-to-rem(280);
     }
   }
 }

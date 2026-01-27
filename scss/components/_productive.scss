@@ -1,16 +1,17 @@
 @use '../utils/' as *;
 
 .productive {
-  max-width: px-to-rem(1186);
-  margin-inline: auto;
-  margin-bottom: var(--spacing-1300);
+  --max-content-width:#{px-to-rem(1186)};
+  background-color: $navy-900;
+
+  padding-bottom: px-to-rem(150);
 
   @include respond-to(md) {
-    margin-bottom: var(--spacing-900);
+    padding-bottom: px-to-rem(72);
   }
 
   @include respond-to(lg) {
-    margin-bottom: var(--spacing-1100);
+    padding-bottom: px-to-rem(120);
   }
 
   &__container {
@@ -46,6 +47,7 @@
 
     @include respond-to(lg) {
       width: 15ch;
+      ;
     }
   }
 
@@ -53,31 +55,33 @@
     @include productive__text;
   }
 
-  &__link {
+  &__link-content {
+    // @include link;
+    font-family: $font-primary;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.67rem + 0.35vw, 1rem);
+    display: inline-block;
+    color: $blue-300;
+    border-bottom: 1px solid $blue-300;
+    transition: all 150ms ease-in-out;
 
-    &-content {
-      @include link;
-      display: inline-block;
-      color: $blue-300;
-      border-bottom: 1px solid $blue-300;
-      transition: all 150ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: hsl(0, 0%, 100%);
+      border-bottom: 1px solid hsl(0, 0%, 100%);
 
-      &:hover,
-      &:focus {
-        color: $color-white;
-        border-bottom: 1px solid $color-white;
-        font-weight: 400;
-
-        svg use {
-          fill: white; // Changes the circle background
-        }
+      svg use {
+        fill: white;
       }
 
-      svg {
-        margin-left: var(--spacing-100);
-        vertical-align: middle;
-        transition: all 150ms ease-in-out;
-      }
     }
+
+    svg {
+      margin-left: var(--spacing-100);
+      vertical-align: middle;
+      transition: all 150ms ease-in-out;
+    }
+
+
   }
 }
