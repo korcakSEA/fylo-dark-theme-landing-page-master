@@ -4,6 +4,10 @@
   background-color: $navy-900;
   padding-bottom: px-to-rem(150);
 
+  // To make the quote visible on the first child of testimonial card
+  position: relative;
+  z-index: 10;
+
   @include respond-to(md) {
     padding-bottom: px-to-rem(80);
   }
@@ -39,6 +43,7 @@
   &__card {
     padding: var(--spacing-300);
     background-color: $navy-800;
+    border-radius: 4px;
 
     @include respond-to(md) {
       padding: var(--spacing-500);
@@ -47,6 +52,28 @@
     @include respond-to(lg) {
       padding: var(--spacing-400) var(--spacing-300);
     }
+
+    &:first-child {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        /* Pull it up and left */
+        top: 0;
+        left: 0;
+        transform: translate(-10%, -40%);
+
+        z-index: -1;
+
+        width: clamp(2rem, 1.7125rem + 1.4375vw, 3.4375rem);
+        aspect-ratio: 11 / 15;
+        background-image: url("../../images/bg-quotes.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
   }
 
   .testimonial {

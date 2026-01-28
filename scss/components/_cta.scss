@@ -57,7 +57,7 @@
   &__group {
     width: 100%;
 
-    @include respond-to(md) {
+    @include respond-to(lg) {
       max-width: 30rem;
     }
   }
@@ -84,13 +84,17 @@
     }
   }
 
-  &__error-msg.js-warning {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.75rem;
-    color: hsl(0, 100%, 63%);
-    margin-top: var(--spacing-50);
-    padding-left: px-to-rem(2);
-    text-align: start;
+  &__error-msg {
+    height: px-to-rem(14);
+
+    &.js-warning {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.75rem;
+      color: hsl(0, 100%, 63%);
+      margin-top: var(--spacing-50);
+      padding-left: px-to-rem(2);
+      text-align: start;
+    }
   }
 
 }

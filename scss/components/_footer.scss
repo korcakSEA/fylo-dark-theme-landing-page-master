@@ -4,4 +4,188 @@
   background-color: $navy-950;
   // Footer max content width with a fallback value
   --max-content-width:#{px-to-rem(1240)};
+
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--spacing-600);
+  height: 60.9375rem;
+  margin-top: -180px;
+
+  @include respond-to(md) {
+    height: 40rem;
+    padding-inline: var(--spacing-700);
+    padding-block: var(--spacing-800);
+  }
+
+  @include respond-to(lg) {
+    height: 27.5rem;
+    padding-inline: var(--spacing-1000);
+    padding-block: var(--spacing-700);
+    margin-top: -115px;
+  }
+
+  &__logo {
+    width: 6.75rem;
+    margin-bottom: var(--spacing-500);
+
+    @include respond-to(md) {
+      margin-bottom: var(--spacing-700);
+    }
+
+    @include respond-to(lg) {
+      margin-bottom: var(--spacing-600)
+    }
+  }
+
+  &__content {
+    @include respond-to(md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    @include respond-to(lg) {
+      justify-content: space-between;
+    }
+  }
+
+  &__contact-info {
+    margin-bottom: var(--spacing-700);
+
+    @include respond-to(md) {
+      width: 100%;
+      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    @include respond-to(lg) {
+      width: 55%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: var(--spacing-200);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-200);
+
+    &--address {
+      grid-row: span 2;
+
+      p {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.5;
+      }
+
+    }
+
+    &--phone p,
+    &--email p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+  }
+
+  &__icon-container {
+    width: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  &__nav {
+
+    display: grid;
+    margin-bottom: var(--spacing-600);
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-400);
+      margin-bottom: 0;
+
+      /* On Tablet, we need the ULs to not restrict the layout */
+      ul {
+        display: contents;
+        /* 'display: contents' makes the <ul> "disappear" so the <li> elements 
+          become direct children of the grid! */
+      }
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      ul {
+        display: block;
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: var(--spacing-200);
+
+    & li:nth-child(4) {
+      margin-bottom: var(--spacing-500);
+
+      @include respond-to(md) {
+        margin-bottom: var(--spacing-200);
+      }
+    }
+  }
+
+
+  &__link {
+    @include link;
+
+    @include respond-to(lg) {
+      display: block;
+      margin-bottom: var(--spacing-200);
+    }
+  }
+
+  &__social {
+    width: clamp(6.375rem, 5.0033396947rem + 5.8524173028vw, 7.8125rem);
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+
+    @include respond-to(md) {
+      margin-inline: 0;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.6875rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: 1px solid hsl(222, 36%, 91%);
+      transition: border-color 0.3s ease;
+
+      @include respond-to(md) {
+        width: 2rem;
+      }
+
+      i {
+        color: hsl(0, 0%, 100%);
+        transition: color 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: hsl(177, 67%, 63%);
+
+        i {
+          color: hsl(177, 67%, 63%);
+        }
+      }
+    }
+  }
 }
