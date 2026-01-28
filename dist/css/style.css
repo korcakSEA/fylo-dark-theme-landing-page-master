@@ -420,10 +420,206 @@ li {
 
 .testimonials {
   background-color: hsl(218, 28%, 13%);
+  padding-bottom: 9.375rem;
+}
+@media (min-width: 40rem) {
+  .testimonials {
+    padding-bottom: 5rem;
+  }
+}
+@media (min-width: 40rem) {
+  .testimonials {
+    padding-bottom: 13.75rem;
+  }
+}
+@media (min-width: 40rem) {
+  .testimonials__container {
+    padding-inline: 4rem;
+  }
+}
+@media (min-width: 75rem) {
+  .testimonials__container {
+    padding-inline: 2.625rem;
+  }
+}
+.testimonials__grid {
+  display: grid;
+  gap: var(--spacing-300);
+}
+@media (min-width: 40rem) {
+  .testimonials__grid {
+    gap: var(--spacing-500);
+  }
+}
+@media (min-width: 75rem) {
+  .testimonials__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.testimonials__card {
+  padding: var(--spacing-300);
+  background-color: hsl(219, 30%, 18%);
+}
+@media (min-width: 40rem) {
+  .testimonials__card {
+    padding: var(--spacing-500);
+  }
+}
+@media (min-width: 75rem) {
+  .testimonials__card {
+    padding: var(--spacing-400) var(--spacing-300);
+  }
+}
+.testimonials .testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+@media (min-width: 40rem) {
+  .testimonials .testimonial {
+    gap: var(--spacing-300);
+  }
+}
+.testimonials .testimonial__quote {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 40rem) {
+  .testimonials .testimonial__quote {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+}
+.testimonials .testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+.testimonials .testimonial__avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.testimonials .testimonial__name {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.testimonials .testimonial__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.4375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 }
 
 .cta {
+  --max-content-width:53.9375rem;
   background-color: hsl(218, 28%, 13%);
+}
+.cta__container {
+  background-color: hsl(217, 28%, 15%);
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: var(--spacing-300) var(--spacing-500);
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 40rem) {
+  .cta__container {
+    padding: var(--spacing-500) var(--spacing-600);
+  }
+}
+@media (min-width: 75rem) {
+  .cta__container {
+    padding: var(--spacing-1000) var(--spacing-600);
+  }
+}
+.cta__content {
+  text-align: center;
+}
+.cta__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+@media (min-width: 40rem) {
+  .cta__title {
+    font-size: 2.5rem;
+  }
+}
+.cta__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin-top: var(--spacing-300);
+  margin-bottom: var(--spacing-400);
+}
+.cta__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+@media (min-width: 40rem) {
+  .cta__form {
+    gap: var(--spacing-200);
+  }
+}
+@media (min-width: 75rem) {
+  .cta__form {
+    flex-direction: row;
+    align-items: start;
+    gap: var(--spacing-300);
+  }
+}
+.cta__group {
+  width: 100%;
+}
+@media (min-width: 40rem) {
+  .cta__group {
+    max-width: 30rem;
+  }
+}
+.cta__input {
+  padding: var(--spacing-150) var(--spacing-200);
+  border-radius: 1.5rem;
+  height: 3rem;
+  border: none;
+  width: 100%;
+}
+.cta__input::placeholder {
+  color: hsl(0, 0%, 75%);
+  text-align: center;
+}
+.cta .button--cta {
+  width: 100%;
+}
+@media (min-width: 75rem) {
+  .cta .button--cta {
+    width: 12.5rem;
+    padding-inline: var(--spacing-300);
+  }
+}
+.cta__error-msg.js-warning {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+  color: hsl(0, 100%, 63%);
+  margin-top: var(--spacing-50);
+  padding-left: 0.125rem;
+  text-align: start;
 }
 
 .footer {

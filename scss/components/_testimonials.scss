@@ -2,4 +2,87 @@
 
 .testimonials {
   background-color: $navy-900;
+  padding-bottom: px-to-rem(150);
+
+  @include respond-to(md) {
+    padding-bottom: px-to-rem(80);
+  }
+
+  @include respond-to(md) {
+    padding-bottom: px-to-rem(220);
+  }
+
+  &__container {
+
+    @include respond-to(md) {
+      padding-inline: px-to-rem(64);
+    }
+
+    @include respond-to(lg) {
+      padding-inline: px-to-rem(42);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: var(--spacing-300);
+
+    @include respond-to(md) {
+      gap: var(--spacing-500);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    padding: var(--spacing-300);
+    background-color: $navy-800;
+
+    @include respond-to(md) {
+      padding: var(--spacing-500);
+    }
+
+    @include respond-to(lg) {
+      padding: var(--spacing-400) var(--spacing-300);
+    }
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+
+    @include respond-to(md) {
+      gap: var(--spacing-300);
+    }
+
+    &__quote {
+      @include testimonial__quote;
+    }
+
+    &__author {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-100);
+    }
+
+    &__avatar {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+
+    &__name {
+      display: block;
+      @include testimonial__name;
+    }
+
+    &__title {
+      @include testimonial__position;
+    }
+  }
+
 }
